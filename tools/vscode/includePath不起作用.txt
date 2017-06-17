@@ -1,0 +1,27 @@
+I am trying to add STL path to includePath, but doesn't work;
+
+"includePath": [
+                "${workspaceRoot}",
+                "F:/code/stl"
+            ]
+            
+
+You also need to set the browse.path, includePath is used when the intelliSenseEngine is set to Default
+and should match the compiler, and the browse.path is the path where you want symbols to be searched
+
+{
+    "name": "Win32",
+    "includePath": [
+        "${workspaceRoot}",
+        "F:/code/stl"
+    ],
+    "defines": [
+        "_DEBUG",
+        "UNICODE"
+    ],
+    "browse": {
+        "path": ["F:/code/stl"],
+        "limitSymbolsToIncludedHeaders": true,
+        "databaseFilename": ""
+    }
+}
