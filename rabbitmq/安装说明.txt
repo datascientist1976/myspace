@@ -1,0 +1,11 @@
+Q1：erlang版本报错
+
+Error: Package: rabbitmq-server-3.6.0-1.noarch (/rabbitmq-server-3.6.0-1.noarch) 
+Requires: erlang >= R16B-3 
+You could try using --skip-broken to work around the problem 
+You could try running: rpm -Va --nofiles --nodigest
+
+A1：erlang的版本问题, 其实没有影响的, 可以用命令:
+    rpm -ivh --nodeps rabbitmq-server-3.6.0-1.noarch.rpm
+安装;
+ 
