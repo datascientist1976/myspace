@@ -1,0 +1,19 @@
+编写消息队列程序时，希望引用系统的msgbuf结构，但是编译时报错：
+
+error: storage size of ‘buf’ isn’t known
+struct msgbuf buf;
+
+查看头文件#include <sys/msg.h>
+发现定义
+
+#ifdef __USE_GNU
+/* Template for struct to be used as argument for `msgsnd' and `msgrcv'.  */
+struct msgbuf
+  {
+    __syscall_slong_t mtype;    /* type of received/sent message */
+    char mtext[1];      /* text of the message */
+  };
+#endif
+
+gcc编译开启__USE_GNU宏
+gcc -D _GNU_SOURCE -o msq2 msq2.c
