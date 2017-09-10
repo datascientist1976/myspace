@@ -1,0 +1,18 @@
+
+Reference: 
+            BOOK Classic Shell Scripting
+            Chapter 6. Variables, Making Decisions, and Repeating Actions
+            6.1 Variables and Arithmetic
+            6.1.1 Variable Assignment and the Environment
+            Page 111
+
+1 Variables may be added to a program¡¯s environment without permanently affecting the environment of the shell or subsequent commands.
+    
+    ENV_VAR=XXX  ./program
+        
+2 The env command may be used to remove variables from a program¡¯s environment,or to temporarily change environment variable values:
+    
+    env -i PATH=$PATH HOME=$HOME LC_ALL=C awk '...' file1 file2
+
+    The ¨Ci option initializes the environment; i.e.,throws away any inherited values, passing in to the program only those variables 
+    named on the command line;
