@@ -1,0 +1,4 @@
+1 book : Understanding the LINUX KERNEL
+  Chapter 5 : Kernel Synchronization
+              Synchronization Primitives
+              Optimization and Memory Barriers
