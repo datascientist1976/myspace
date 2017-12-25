@@ -1,0 +1,1 @@
+xshell和secureCRT搜索之前输入过的命令方法： ctrl + r
